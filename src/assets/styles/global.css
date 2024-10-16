@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+
+.left-nav {
+    @apply flex flex-col w-[6%] h-[100vh] pt-[5%] pb-[30px] items-center justify-start
+}
+
+.left-nav-item{
+    @apply flex transform -rotate-90 mb-[40px] px-[50px] w-1 text-[14px] text-stone-500
+}
+
+.left-nav-line{
+    @apply w-[1px] h-[100px] bg-stone-500 mt-[10px] mb-[80px]
+}
+
+.left-nav-copyright{
+    @apply mt-[36rem]
+}
+
+.left-nav-copyright-item{
+    @apply text-center transform -rotate-90 text-[14px] text-stone-500
+}
+
+.section-left{
+    @apply flex flex-col w-[30%] h-[100vh] justify-center items-start
+}
+
+.section-left-content {
+    @apply pt-[90%] ml-[10%]
+}
+
+.header-section{
+    @apply mb-[20px]
+}
+
+.header-section-head{
+    @apply text-xl font-medium
+}
+
+.header-description{
+    @apply text-[16px] text-black
+}
+
+.section-right{
+    @apply flex flex-col w-full h-[100vh] justify-center items-start
+}
+
+.section-right-content{
+    @apply px-40 py-40
+}
+
+.section-right-link{
+    @apply text-[285px] leading-[14.25rem] transform hover:italic hover:scale-100 hover:rotate-0 hover:translate-x-5 transition-transform duration-500
+
+}
