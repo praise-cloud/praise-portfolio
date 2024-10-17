@@ -1,5 +1,6 @@
 import React from 'react'
 import NavLinks from "../components/constant/NavLinks"
+// import Languages from '../components/constant/Skills'
 
 const Home = () => {
   return (
@@ -44,14 +45,15 @@ const Home = () => {
                     {/*pages */}
 
                     <div className="section-right">
-                        <div className="section-right-content">
+                        <div className="section-right-content ">
                             <ul>
                                 {NavLinks.map((links, index) => (
                                         <li
                                             key={index}
-                                            to={links.path}
                                             className="section-right-link">
+                                           <a href={links.path} className="section-right-link">
                                             {links.name}
+                                            </a>
                                         </li>
                                     ))}
                             </ul>

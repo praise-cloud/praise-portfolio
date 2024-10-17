@@ -12,7 +12,7 @@
 }
 
 .left-nav-item{
-    @apply flex transform -rotate-90 mb-[40px] px-[50px] w-1 text-[14px] text-stone-500
+    @apply flex transform -rotate-90 mb-[40px] px-[50px] w-1 text-[14px] text-stone-500 tracking-[2px]
 }
 
 .left-nav-line{
@@ -21,6 +21,10 @@
 
 .left-nav-copyright{
     @apply mt-[36rem]
+}
+
+.left-nav-copyright-withoutLinks{
+    @apply mt-[45rem]
 }
 
 .left-nav-copyright-item{
@@ -35,6 +39,10 @@
     @apply pt-[90%] ml-[10%]
 }
 
+.section-left-about-content {
+    @apply  ml-[10%]
+}
+
 .header-section{
     @apply mb-[20px]
 }
@@ -47,15 +55,39 @@
     @apply text-[16px] text-black
 }
 
+.header-description2{
+    @apply text-[16px] text-black pt-10 w-[90%]
+}
+
+.header-section-head-work{
+    @apply text-xl font-medium text-[#ece7e1]
+}
+
+ .header-description-work{
+    @apply text-[16px] text-[#ece7e1]
+}
+
 .section-right{
     @apply flex flex-col w-full h-[100vh] justify-center items-start
 }
 
 .section-right-content{
-    @apply px-40 py-40
+    @apply px-40
 }
 
 .section-right-link{
-    @apply text-[285px] leading-[14.25rem] transform hover:italic hover:scale-100 hover:rotate-0 hover:translate-x-5 transition-transform duration-500
+    @apply text-[316px] leading-[17.25rem] transform hover:italic hover:scale-100 hover:rotate-0 hover:translate-x-5 transition-transform duration-500
 
+}
+
+.section-right-work{
+    @apply flex flex-col w-full h-[100vh] justify-center items-start overflow-auto pt-40
+}
+
+.section-right-work-link{
+    @apply text-[200px] leading-[7.25rem] transform hover:italic hover:scale-100 hover:rotate-0 hover:translate-x-5 transition-transform duration-500 h-1 text-[#ece7e1]
+}
+
+.section-right-work-link-category{
+    @apply flex text-[16px] h-1 text-[#ece7e1]
 }
