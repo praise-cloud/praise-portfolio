@@ -1,5 +1,6 @@
 import React from 'react'
 import NavLinks from "../components/constant/NavLinks"
+import SocialMedia from '../components/constant/Socials'
 // import Languages from '../components/constant/Skills'
 
 const Home = () => {
@@ -9,9 +10,18 @@ const Home = () => {
             <div className="flex">
                 {/* the section division of the website  */}
                     <div className="left-nav">
-                        <div className="left-nav-item">LI</div>
-                        <div className="left-nav-item">TW</div>
-                        <div className="left-nav-item">DR</div>
+                        <div>
+                            {SocialMedia.map((link, index) => (
+                                <a
+                                    key={index}
+                                    href={link.path}
+                                    className="left-nav-item"
+                                    _blank
+                                >
+                                    {link.name}
+                                </a>
+                            ))}
+                        </div>
 
                         {/* the line */}
                         <div className="left-nav-line"></div>

@@ -12,7 +12,7 @@
 }
 
 .left-nav-item{
-    @apply flex transform -rotate-90 mb-[40px] px-[50px] w-1 text-[14px] text-stone-500 tracking-[2px]
+    @apply flex transform -rotate-90 mb-[40px] px-[50px] w-1 text-[14px] text-stone-500 tracking-[3px]
 }
 
 .left-nav-line{
@@ -35,12 +35,16 @@
     @apply flex flex-col w-[30%] h-[100vh] justify-center items-start
 }
 
+.section-left-about{
+    @apply flex flex-col w-full h-[100vh] justify-center items-start overflow-auto pt-[30%]
+}
+
 .section-left-content {
     @apply pt-[90%] ml-[10%]
 }
 
 .section-left-about-content {
-    @apply  ml-[10%]
+    @apply pt-[5%] ml-[10%]
 }
 
 .header-section{
@@ -49,6 +53,14 @@
 
 .header-section-head{
     @apply text-xl font-medium
+}
+
+.header-section-head-about{
+    @apply text-[30rem] font-medium h-[38rem]
+}
+
+.header-section-head-about-span{
+    @apply text-[8rem] px-[18px] py-[27px] rounded-full bg-black text-white
 }
 
 .header-description{
@@ -72,7 +84,7 @@
 }
 
 .section-right-content{
-    @apply px-40
+    @apply px-20
 }
 
 .section-right-link{
@@ -90,4 +102,52 @@
 
 .section-right-work-link-category{
     @apply flex text-[16px] h-1 text-[#ece7e1]
+}
+
+.about-description-head{
+    @apply text-[3rem] w-[50rem]
+}
+
+.about-description-p{
+    @apply text-[20px] w-[45rem] leading-relaxed tracking-wider pt-5
+}
+
+.about-services{
+    @apply py-5
+}
+
+.about-services-head{
+    @apply text-[3rem] pt-10
+}
+
+.about-services-section{
+    @apply flex gap-20
+}
+
+.about-services-section-item{
+    @apply py-5
+}
+
+.about-services-section-item-number{
+    @apply text-[4rem] text-stone-600
+}
+
+.about-services-section-item-header{
+    @apply font-bold text-[1.5rem]
+}
+
+.about-services-section-item-p{
+    @apply w-[20rem]
+}
+
+.about-experience-head{
+    @apply text-[2rem] pt-10 pb-2
+}
+
+.about-experience-content{
+    @apply relative pt-10
+}
+
+.about-experience-p{
+    @apply py-1
 }
