@@ -93,11 +93,22 @@ const About = () => {
                                             - Certification in Software Engineering
                                         </p>
                                     </div>
+
+                                    <div className="flex">
+                                        <p className="py-10">
+                                            with 2 years of experience in frontend development and web design
+                                        </p>
+                                    </div>
+
+                                    <div className="relative">
+                                        <h2 className="about-experience-head">
+                                            SKILLS
+                                        </h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
             </div>
         </div>
     </>
