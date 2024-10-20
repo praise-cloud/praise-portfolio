@@ -1,74 +1,69 @@
 import React from 'react'
+import SocialMedia from "../components/constant/Socials"
 import NavLinks from "../components/constant/NavLinks"
-import SocialMedia from '../components/constant/Socials'
-// import Languages from '../components/constant/Skills'
 
 const Home = () => {
   return (
     <>
-        <div className="w-[100wv] h-[100vh]">
-            <div className="flex">
-                {/* the section division of the website  */}
-                    <div className="left-nav">
-                        <div>
-                            {SocialMedia.map((link, index) => (
+        <div className="container">
+            <div className="nav-left">
+                    {SocialMedia.map((links, index) => (
+                <div className="nav-left-item">
+                        <a
+                            href={links.path}
+                            key={index}
+                            className="nav-left-link">
+                            {links.name}
+                        </a>
+                </div>
+                    ))}
+                <div className="nav-line"></div>
+                <div className="nav-left-item nav-copyright">
+                    <div className="copyright">@/2024</div>
+                </div>
+            </div>
+
+            <div className="wrapper">
+                <div className="section-left">
+                    <div className="content content-main">
+                        <div className="header-mask">
+                            <h1 className="">
+                                PRAISE UGOCHIM GEORGEWILL
+                            </h1>
+                        </div>
+                        <div className="description-mask">
+                            <p className="description">
+                                Software Engineer / Smart Contract Developer / Cybersecurity Analyst / Product Desginer
+                            </p>
+                        </div>
+                        <div className="description-mask">
+                            <p className="description">
+                                Currently upscaling my skills and portfolio, still working on
                                 <a
-                                    key={index}
+                                    href="/"
+                                    target="_blank"
+                                    className="px-2 underline">
+                                    MediLink
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="section-right">
+                    <div className="nav">
+                        {NavLinks.map((link, index) => (
+                            <div className="nav-item">
+                                <a
                                     href={link.path}
-                                    className="left-nav-item"
-                                    _blank
-                                >
+                                    className="nav-link"
+                                    key={index}
+                                    >
                                     {link.name}
                                 </a>
-                            ))}
-                        </div>
-
-                        {/* the line */}
-                        <div className="left-nav-line"></div>
-
-                        {/* copywrite */}
-                        <div className="left-nav-copyright">
-                            <div className="left-nav-copyright-item">@/2024</div>
-                        </div>
-                    </div>
-
-                    {/* my information section */}
-
-                    <div className="section-left">
-                        <div className="section-left-content">
-                            <div className="header-section">
-                                <h1 className="header-section-head">PRAISE UGOCHIM GEORGEWILL</h1>
                             </div>
-                            <div className="header-description">
-                                <p>
-                                Software Engineer /  Blockchain Engineer / Framer Developer / Product Designer.
-                                </p>
-                            </div>
-                            <div className="header-description pt-10 w-[90%]">
-                                <p>
-                                Full-time Full Stack Developer working on <a href="https://github.com/praise-cloud/Medilink" className="px-2 underline">MediLink</a>, a platform improving healthcare management.
-                                </p>
-                            </div>
-                        </div>
+                        ))}
                     </div>
-
-                    {/*pages */}
-
-                    <div className="section-right">
-                        <div className="section-right-content ">
-                            <ul>
-                                {NavLinks.map((links, index) => (
-                                        <li
-                                            key={index}
-                                            className="section-right-link">
-                                           <a href={links.path} className="section-right-link">
-                                            {links.name}
-                                            </a>
-                                        </li>
-                                    ))}
-                            </ul>
-                        </div>
-                    </div>
+                </div>
             </div>
         </div>
     </>

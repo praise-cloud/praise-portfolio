@@ -4,150 +4,84 @@
 
 *{
     box-sizing: border-box;
-    font-family: "Playfair Display", serif;
+    font-family: Playfair;
 }
 
-.left-nav {
-    @apply flex flex-col w-[6%] h-[100vh] pt-[5%] pb-[30px] items-center justify-start
+/* main container */
+
+.container{
+    @apply z-[500] relative
 }
 
-.left-nav-item{
-    @apply flex transform -rotate-90 mb-[40px] px-[50px] w-1 text-[14px] text-stone-500 tracking-[3px]
+/* left navigation */
+
+
+.nav-left {
+    @apply z-[600] w-[6%] h-[100vh] flex flex-col justify-start items-center pt-[5%] pb-[30px] fixed
+}
+r
+.nav-left-item{
+    @apply flex mb-[40px] pl-[20px] pr-[15px] transform -rotate-90
 }
 
-.left-nav-line{
-    @apply w-[1px] h-[100px] bg-stone-500 mt-[10px] mb-[80px]
+.nav-left-link{
+    @apply block text-[10px] font-[500] tracking-[5px] text-charcoal items-center transform -rotate-90 pl-[20px] mb-[40px]
 }
 
-.left-nav-copyright{
-    @apply mt-[36rem]
+.nav-line {
+    @apply w-[1px] h-[100px] bg-charcoal mt-[10px] mb-[80px]
 }
 
-.left-nav-copyright-withoutLinks{
-    @apply mt-[45rem]
+.nav-copyright{
+    @apply w-[110px] absolute top-auto bottom-[3vh] left-[0%] right-[0%]
 }
 
-.left-nav-copyright-item{
-    @apply text-center transform -rotate-90 text-[14px] text-stone-500
+.copyright {
+    @apply text-center tracking-[4px] text-[10px] font-[500] transform -rotate-90
+}
+
+.wrapper {
+    @apply w-[90%] mx-auto pl-[10%] pr-[5%] relative
 }
 
 .section-left{
-    @apply flex flex-col w-[30%] h-[100vh] justify-center items-start
+    @apply w-[25%] h-[100vh] flex flex-col justify-center items-start fixed
 }
 
-.section-left-about{
-    @apply flex flex-col w-full h-[100vh] justify-center items-start overflow-auto pt-[30%]
+.content.content-main{
+    @apply -ml-[10%] pt-[90%]
 }
 
-.section-left-content {
-    @apply pt-[90%] ml-[10%]
+.header-mask{
+    @apply mb-[2vh] pt-[5%] overflow-hidden
 }
 
-.section-left-about-content {
-    @apply pt-[5%] ml-[10%]
+.header.swipe-up{
+    @apply tracking-[2px] uppercase text-[15px] font-[500]
 }
 
-.header-section{
-    @apply mb-[20px]
+.description-mask{
+    @apply block overflow-hidden
 }
 
-.header-section-head{
-    @apply text-xl font-medium
+.description {
+    @apply max-w-[80%] mx-0 text-[13px] font-[400] leading-[1.9em] relative
 }
 
-.header-section-head-about{
-    @apply text-[30rem] font-medium h-[38rem]
-}
-
-.header-section-head-about-span{
-    @apply text-[8rem] px-[18px] py-[27px] rounded-full bg-black text-white
-}
-
-.header-description{
-    @apply text-[16px] text-black
-}
-
-.header-description2{
-    @apply text-[16px] text-black pt-10 w-[90%]
-}
-
-.header-section-head-work{
-    @apply text-xl font-medium text-[#ece7e1]
-}
-
- .header-description-work{
-    @apply text-[16px] text-[#ece7e1]
-}
+/* section right */
 
 .section-right{
-    @apply flex flex-col w-full h-[100vh] justify-center items-start
+    @apply w-[65%] h-[90vh] float-right flex gap-x-[16px] gap-y-[16px] items-center flex-col justify-center text-center pt-[5vh] relative top-[0%] bottom-[0%] left-auto right-[0%]
 }
 
-.section-right-content{
-    @apply px-20
+.nav{
+    @apply text-left pt-[10%] pl-[10%]
 }
 
-.section-right-link{
-    @apply text-[316px] leading-[17.25rem] transform hover:italic hover:scale-100 hover:rotate-0 hover:translate-x-5 transition-transform duration-500
-
+.nav-item{
+    @apply text-right pr-[5%] inline-block relative
 }
 
-.section-right-work{
-    @apply flex flex-col w-full h-[100vh] justify-center items-start overflow-auto pt-40
-}
-
-.section-right-work-link{
-    @apply text-[200px] leading-[7.25rem] transform hover:italic hover:scale-100 hover:rotate-0 hover:translate-x-5 transition-transform duration-500 h-1 text-[#ece7e1]
-}
-
-.section-right-work-link-category{
-    @apply flex text-[16px] h-1 text-[#ece7e1]
-}
-
-.about-description-head{
-    @apply text-[3rem] w-[50rem]
-}
-
-.about-description-p{
-    @apply text-[20px] w-[45rem] leading-relaxed tracking-wider pt-5
-}
-
-.about-services{
-    @apply py-5
-}
-
-.about-services-head{
-    @apply text-[3rem] pt-10
-}
-
-.about-services-section{
-    @apply flex gap-20
-}
-
-.about-services-section-item{
-    @apply py-5
-}
-
-.about-services-section-item-number{
-    @apply text-[4rem] text-stone-600
-}
-
-.about-services-section-item-header{
-    @apply font-bold text-[1.5rem]
-}
-
-.about-services-section-item-p{
-    @apply w-[20rem]
-}
-
-.about-experience-head{
-    @apply text-[2rem] pt-10 pb-2
-}
-
-.about-experience-content{
-    @apply relative pt-10
-}
-
-.about-experience-p{
-    @apply py-1
+.nav-link{
+    @apply z-[100] text-charcoal text-left uppercase text-[11vw] font-[300] leading-[.95em] block relative  transform hover:italic hover:scale-100 hover:rotate-0 hover:translate-x-5 transition-transform duration-500
 }
